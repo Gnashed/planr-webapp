@@ -1,5 +1,5 @@
-import { Button } from 'react-bootstrap';
-import { signOut } from '../utils/auth';
+// import { Button } from 'react-bootstrap';
+// import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
@@ -16,10 +16,9 @@ function Home() {
       }}
     >
       <h1>Hello {user.displayName}! </h1>
-      <p>Click the button below to logout!</p>
-      <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
-        Sign Out
-      </Button>
+      {/* TODO: #1 Form component */}
+      <h2>Before accessing the dashboard, we will need to know your full name:</h2>
+      <footer>Copyright &#169; Planr 2024</footer>
     </div>
   );
 }
