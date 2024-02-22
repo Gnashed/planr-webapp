@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 // import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
@@ -16,8 +16,8 @@ function Home() {
       }}
     >
       <h1>Hello {user.displayName}! </h1>
-      <h2>Fill out the form below to get started: </h2>
-      <Button>Add</Button>
+      {/* TODO: #1 Form component */}
+      <h2>Before accessing the dashboard, we will need to know your full name:</h2>
       <footer>Copyright &#169; Planr 2024</footer>
     </div>
   );
