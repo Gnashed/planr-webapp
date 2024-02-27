@@ -5,8 +5,7 @@
     "last_name":"Haydn",
     "grade_level":7,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_n6y5i4h4d7c4f7": {
@@ -15,8 +14,7 @@
     "last_name":"Fillon",
     "grade_level":11,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_e3r9i1u4a6b1f4": {
@@ -25,8 +23,7 @@
     "last_name":"Lewzey",
     "grade_level":8,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_g8h7d5f4g6d9g9": {
@@ -35,8 +32,7 @@
     "last_name":"Croney",
     "grade_level":1,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_n1n2m8q8m7d8u9": {
@@ -45,8 +41,7 @@
     "last_name":"Malloch",
     "grade_level":4,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_w0o8p2d3w4d1n3": {
@@ -55,8 +50,7 @@
     "last_name":"Bim",
     "grade_level":6,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_s7u6i3p0d1k4q9": {
@@ -65,8 +59,7 @@
     "last_name":"Symcoxe",
     "grade_level":6,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_q6k0g2f2p9v6u5": {
@@ -75,8 +68,7 @@
     "last_name":"Bromidge",
     "grade_level":3,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_f7i0v6i8t8f5z3": {
@@ -85,8 +77,7 @@
     "last_name":"Rymer",
     "grade_level":2,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_o6u1q7d6u0x7k8": {
@@ -95,8 +86,7 @@
     "last_name":"Brandin",
     "grade_level":1,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_m3t6b0r4n5i0a7": {
@@ -105,8 +95,7 @@
     "last_name":"Raff",
     "grade_level":6,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_g2q2p0i2r6h3p7": {
@@ -115,8 +104,7 @@
     "last_name":"Stollenberg",
     "grade_level":5,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_h8y8m3q7b2b3r6": {
@@ -125,8 +113,7 @@
     "last_name":"Arpur",
     "grade_level":7,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_i7x9f2w0z3x9h3": {
@@ -135,8 +122,7 @@
     "last_name":"Wallice",
     "grade_level":1,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_j7a3e8d7t3j0p2": {
@@ -145,8 +131,7 @@
     "last_name":"Lantry",
     "grade_level":12,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_q1k4m0z1q1v9e6": {
@@ -155,8 +140,7 @@
     "last_name":"Brownsworth",
     "grade_level":11,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_n3m6l7f6n9l9o8": {
@@ -165,8 +149,7 @@
     "last_name":"Fyldes",
     "grade_level":8,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_w3i5a3y8y7i2f4": {
@@ -175,8 +158,7 @@
     "last_name":"Mathiasen",
     "grade_level":2,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true},
   "ST_d7y9k8t4p7g2e4": {
     "student_id":"ST_d7y9k8t4p7g2e4",
@@ -184,8 +166,7 @@
     "last_name":"Kemston",
     "grade_level":11,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true},
   "ST_w1u0i5f5y7g4x2": {
     "student_id":"ST_w1u0i5f5y7g4x2",
@@ -193,8 +174,7 @@
     "last_name":"Creeber",
     "grade_level":12,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true},
   "ST_q6e6g1r5r4z4q6": {
     "student_id":"ST_q6e6g1r5r4z4q6",
@@ -202,8 +182,7 @@
     "last_name":"Llorens",
     "grade_level":4,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false},
   "ST_z5i4z5y4w6s5a0": {
     "student_id":"ST_z5i4z5y4w6s5a0",
@@ -211,8 +190,7 @@
     ,"last_name":"Casiero",
     "grade_level":3,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false},
   "ST_i9m3g0n0o6n6r2": {
     "student_id":"ST_i9m3g0n0o6n6r2",
@@ -220,8 +198,7 @@
     "last_name":"Obern",
     "grade_level":10,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_k2e2g4i4o4y2y5": {
@@ -230,8 +207,7 @@
     "last_name":"Beven",
     "grade_level":11,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_c9n4w1x1a0w7z9": {
@@ -240,8 +216,7 @@
     "last_name":"Gaskin",
     "grade_level":4,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_m8o1x6a1q4l4k9": {
@@ -250,8 +225,7 @@
     "last_name":"Benjefield",
     "grade_level":8,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_q6j0s9j3s3p9c2": {
@@ -260,8 +234,7 @@
     "last_name":"Edel",
     "grade_level":1,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":false
   },
   "ST_z7m9k7n5b5a3e0": {
@@ -270,8 +243,7 @@
     "last_name":"Sturmey",
     "grade_level":3,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true}
     ,
   "ST_q8w1r2j6n2d9q4": {
@@ -280,8 +252,7 @@
     "last_name":"Beebe",
     "grade_level":6,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   },
   "ST_n9e5y6y2c0e2g9": {
@@ -290,8 +261,7 @@
     "last_name":"Rein",
     "grade_level":7,
     "teacher":"",
-    "attendance":"",
-    "stuudent_grades":"",
+    "classroom": "",
     "has_a_special_need":true
   }
 }
