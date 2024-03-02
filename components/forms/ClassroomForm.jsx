@@ -21,7 +21,7 @@ const IntitialFormState = {
   subject: '',
   students: '',
   grade_level: '',
-  APorHonors: '', // TODO: Should be radio buttons. WIP
+  APorHonors: '',
 };
 
 // Step 2: Classroom Form component.
@@ -64,22 +64,72 @@ export default function ClassroomForm({ obj }) {
       {/* Step 4 Add React Bootstrap Form */}
       <Form onSubmit={handleSubmit}>
         <h2>Classroom Info</h2>
-
-        {/* Subject INPUT  */}
-        <FloatingLabel controlId="floatingInput1" label="subject" className="mb-3">
+        {/* Subject */}
+        <FloatingLabel controlId="floatingInput1" label="Subject" className="mb-3">
           <Form.Control
             type="text"
-            placeholder="6th Grade Geometry"
-            name="name"
-            value={formInput.name}
+            placeholder="Enter Subject"
+            name="subject"
+            value={formInput.subject}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
 
+        {/* Students */}
+        <FloatingLabel controlId="floatingInput2" label="Students" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Number of students"
+            name="students"
+            value={formInput.students}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* Grade Level */}
+        <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Grade Level:"
+            name="grade_level"
+            value={formInput.grade_level}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* AP or Honors, TODO: Come back to this. */}
+        <p>AP/Honors: </p>
+        {['radio'].map((type) => (
+          <div key={`inline-${type}`} className="mb-3">
+            <Form.Check
+              inline
+              label="No"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+            />
+            <Form.Check
+              inline
+              label="AP"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+            />
+            <Form.Check
+              inline
+              label="Honors"
+              name="group1"
+              type={type}
+              id={`inline-${type}-3`}
+            />
+          </div>
+        ))}
+
         {/* SUBMIT BUTTON  */}
-        {/* TODO: Fix by adding prop validation */}
-        <Button variant="success" type="submit">{obj.id ? 'Update' : 'Create'} Classroom</Button>
+        <Button variant="primary" type="submit">{obj.id ? 'Update' : 'Create'} Classroom</Button>
       </Form>
     </>
   );
