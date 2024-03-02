@@ -1,5 +1,6 @@
-// import { Button } from 'react-bootstrap';
 // import { signOut } from '../utils/auth';
+import { Button } from 'react-bootstrap';
+import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
 
 function Home() {
@@ -16,9 +17,10 @@ function Home() {
       }}
     >
       <h1>Hello {user.displayName}! </h1>
-      {/* TODO: #1 Form component */}
-      <h2>Before accessing the dashboard, we will need to know your full name:</h2>
-      <footer>Copyright &#169; Planr 2024</footer>
+
+      <Link href="/newClassroom" passHref>
+        <Button variant="success">Create Classroom</Button>
+      </Link>
     </div>
   );
 }

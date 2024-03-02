@@ -4,7 +4,7 @@ const endpoint = clientCredentials.databaseURL;
 
 // TODO: CREATE Classroom
 const createClassroom = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/#######`, {
+  fetch(`${endpoint}/classroom`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const getClassroom = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const updateClassroom = (payload) => new Promise((resolve, reject) => {
+const updateSingleClassroom = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/classroom/${payload.id}`, {
     method: 'PUT',
     headers: {
@@ -42,4 +42,4 @@ const updateClassroom = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { createClassroom, getClassroom, updateClassroom };
+export { createClassroom, getClassroom, updateSingleClassroom };
