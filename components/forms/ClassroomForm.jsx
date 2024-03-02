@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
-// TODO: import promises from /api.
+import { createClassroom, getClassroom, updateClassroom } from '../../api/classroomData';
 
 /*
 
@@ -49,6 +49,7 @@ export default function ClassroomForm({ obj }) {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
     if (obj.id) {
       // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's id.
+      updateClassroom(formInput).then(() => router.push(`/classroom/${obj.id}`));
     } else {
       const payload = { ...formInput };
       // TODO: Add logic to create the classroom using via an object, payload, then routes the user to the classroom.

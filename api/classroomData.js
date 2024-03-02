@@ -16,6 +16,7 @@ const createClassroom = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// TODO: GET Classroom
 const getClassroom = (id) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/###/${id}`, {
     method: 'GET',
@@ -28,4 +29,17 @@ const getClassroom = (id) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { createClassroom, getClassroom };
+const updateClassroom = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/classroom/${payload.id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export { createClassroom, getClassroom, updateClassroom };
