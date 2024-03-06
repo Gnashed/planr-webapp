@@ -1,267 +1,82 @@
-{
-  "ST_s7q1r8x3q9o5c1": {
-    "student_id":"ST_s7q1r8x3q9o5c1",
-    "first_name":"Dario",
-    "last_name":"Haydn",
-    "grade_level":7,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_n6y5i4h4d7c4f7": {
-    "student_id":"ST_n6y5i4h4d7c4f7",
-    "first_name":"Odella",
-    "last_name":"Fillon",
-    "grade_level":11,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_e3r9i1u4a6b1f4": {
-    "student_id":"ST_e3r9i1u4a6b1f4",
-    "first_name":"Ruby",
-    "last_name":"Lewzey",
+{  
+  "-ZwDujOVia-HaPGPHb-N": {
+    "firebaseKey":"-ZwDujOVia-HaPGPHb-N",
+    "first_name":"Alyssa",
+    "last_name":"Magor",
     "grade_level":8,
-    "teacher":"",
-    "classroom": "",
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
     "has_a_special_need":false
   },
-  "ST_g8h7d5f4g6d9g9": {
-    "student_id":"ST_g8h7d5f4g6d9g9",
-    "first_name":"Olag",
-    "last_name":"Croney",
-    "grade_level":1,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_n1n2m8q8m7d8u9": {
-    "student_id":"ST_n1n2m8q8m7d8u9",
-    "first_name":"Veradis",
-    "last_name":"Malloch",
-    "grade_level":4,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_w0o8p2d3w4d1n3": {
-    "student_id":"ST_w0o8p2d3w4d1n3",
-    "first_name":"Waring",
-    "last_name":"Bim",
-    "grade_level":6,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_s7u6i3p0d1k4q9": {
-    "student_id":"ST_s7u6i3p0d1k4q9",
-    "first_name":"Rayshell",
-    "last_name":"Symcoxe",
-    "grade_level":6,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_q6k0g2f2p9v6u5": {
-    "student_id":"ST_q6k0g2f2p9v6u5",
-    "first_name":"Sandro",
-    "last_name":"Bromidge",
-    "grade_level":3,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_f7i0v6i8t8f5z3": {
-    "student_id":"ST_f7i0v6i8t8f5z3",
-    "first_name":"Faunie",
-    "last_name":"Rymer",
-    "grade_level":2,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_o6u1q7d6u0x7k8": {
-    "student_id":"ST_o6u1q7d6u0x7k8",
-    "first_name":"Stace",
-    "last_name":"Brandin",
-    "grade_level":1,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_m3t6b0r4n5i0a7": {
-    "student_id":"ST_m3t6b0r4n5i0a7",
-    "first_name":"Carmon",
-    "last_name":"Raff",
-    "grade_level":6,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_g2q2p0i2r6h3p7": {
-    "student_id":"ST_g2q2p0i2r6h3p7",
-    "first_name":"Lindy",
-    "last_name":"Stollenberg",
-    "grade_level":5,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_h8y8m3q7b2b3r6": {
-    "student_id":"ST_h8y8m3q7b2b3r6",
-    "first_name":"Dalis",
-    "last_name":"Arpur",
-    "grade_level":7,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_i7x9f2w0z3x9h3": {
-    "student_id":"ST_i7x9f2w0z3x9h3",
-    "first_name":"Torey",
-    "last_name":"Wallice",
-    "grade_level":1,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_j7a3e8d7t3j0p2": {
-    "student_id":"ST_j7a3e8d7t3j0p2",
-    "first_name":"Lurette",
-    "last_name":"Lantry",
-    "grade_level":12,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_q1k4m0z1q1v9e6": {
-    "student_id":"ST_q1k4m0z1q1v9e6",
-    "first_name":"Davine",
-    "last_name":"Brownsworth",
-    "grade_level":11,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_n3m6l7f6n9l9o8": {
-    "student_id":"ST_n3m6l7f6n9l9o8",
-    "first_name":"Caron",
-    "last_name":"Fyldes",
+  "-WkSwxVQwl-LlHSIEl-K": {
+    "firebaseKey":"-WkSwxVQwl-LlHSIEl-K",
+    "first_name":"Sly",
+    "last_name":"Tibbles",
     "grade_level":8,
-    "teacher":"",
-    "classroom": "",
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
     "has_a_special_need":false
   },
-  "ST_w3i5a3y8y7i2f4": {
-    "student_id":"ST_w3i5a3y8y7i2f4",
-    "first_name":"Hobart",
-    "last_name":"Mathiasen",
-    "grade_level":2,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true},
-  "ST_d7y9k8t4p7g2e4": {
-    "student_id":"ST_d7y9k8t4p7g2e4",
-    "first_name":"Ryun",
-    "last_name":"Kemston",
-    "grade_level":11,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true},
-  "ST_w1u0i5f5y7g4x2": {
-    "student_id":"ST_w1u0i5f5y7g4x2",
-    "first_name":"Kory",
-    "last_name":"Creeber",
-    "grade_level":12,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true},
-  "ST_q6e6g1r5r4z4q6": {
-    "student_id":"ST_q6e6g1r5r4z4q6",
-    "first_name":"Phebe",
-    "last_name":"Llorens",
-    "grade_level":4,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false},
-  "ST_z5i4z5y4w6s5a0": {
-    "student_id":"ST_z5i4z5y4w6s5a0",
-    "first_name":"Barret"
-    ,"last_name":"Casiero",
-    "grade_level":3,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false},
-  "ST_i9m3g0n0o6n6r2": {
-    "student_id":"ST_i9m3g0n0o6n6r2",
-    "first_name":"Fallon",
-    "last_name":"Obern",
-    "grade_level":10,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_k2e2g4i4o4y2y5": {
-    "student_id":"ST_k2e2g4i4o4y2y5",
-    "first_name":"Cynde",
-    "last_name":"Beven",
-    "grade_level":11,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_c9n4w1x1a0w7z9": {
-    "student_id":"ST_c9n4w1x1a0w7z9",
-    "first_name":"Margarethe",
-    "last_name":"Gaskin",
-    "grade_level":4,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":false
-  },
-  "ST_m8o1x6a1q4l4k9": {
-    "student_id":"ST_m8o1x6a1q4l4k9",
-    "first_name":"Godfrey",
-    "last_name":"Benjefield",
+  "-AbJmuGAuu-DjHOFYg-J": {
+    "firebaseKey":"-AbJmuGAuu-DjHOFYg-J",
+    "first_name":"Gaby",
+    "last_name":"Scanlon",
     "grade_level":8,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
-  },
-  "ST_q6j0s9j3s3p9c2": {
-    "student_id":"ST_q6j0s9j3s3p9c2",
-    "first_name":"Bryn",
-    "last_name":"Edel",
-    "grade_level":1,
-    "teacher":"",
-    "classroom": "",
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
     "has_a_special_need":false
   },
-  "ST_z7m9k7n5b5a3e0": {
-    "student_id":"ST_z7m9k7n5b5a3e0",
-    "first_name":"Ivett",
-    "last_name":"Sturmey",
-    "grade_level":3,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true}
-    ,
-  "ST_q8w1r2j6n2d9q4": {
-    "student_id":"ST_q8w1r2j6n2d9q4",
-    "first_name":"Merrie",
-    "last_name":"Beebe",
-    "grade_level":6,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
+  "-FkZugMArc-AqPMGGz-L": {
+    "firebaseKey":"-FkZugMArc-AqPMGGz-L",
+    "first_name":"Darleen",
+    "last_name":"Adnett",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
   },
-  "ST_n9e5y6y2c0e2g9": {
-    "student_id":"ST_n9e5y6y2c0e2g9",
-    "first_name":"Ella",
-    "last_name":"Rein",
-    "grade_level":7,
-    "teacher":"",
-    "classroom": "",
-    "has_a_special_need":true
+  "-FkErvDUbc-UrDQDHz-D": {
+    "firebaseKey":"-FkErvDUbc-UrDQDHz-D",
+    "first_name":"Ferdinande",
+    "last_name":"Laverack",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
+  },
+  "-XaDfpPXya-CtMENVj-Q": {
+    "firebaseKey":"-XaDfpPXya-CtMENVj-Q",
+    "first_name":"Gerik",
+    "last_name":"Santello",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
+  },
+  "-AvCcxXDdn-KyGXSOf-G": {
+    "firebaseKey":"-AvCcxXDdn-KyGXSOf-G",
+    "first_name":"Albrecht",
+    "last_name":"Ropking",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
+  },
+  "-AuOadYBbj-FlZYJGh-R": {
+    "firebaseKey":"-AuOadYBbj-FlZYJGh-R",
+    "first_name":"Angelle",
+    "last_name":"Grunbaum",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
+  },
+  "-QpWtaQHwx-GcTAQJa-Q": {
+    "firebaseKey":"-QpWtaQHwx-GcTAQJa-Q",
+    "first_name":"Mariellen",
+    "last_name":"Bussey",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
+  },
+  "-AnAllCMmq-HhWGBJp-P": {
+    "firebaseKey":"-AnAllCMmq-HhWGBJp-P",
+    "first_name":"Ced",
+    "last_name":"Fuchs",
+    "grade_level":8,
+    "classroom_id":"-QpXtpLHzm-OcFKQJz-Y",
+    "has_a_special_need":false
   }
 }

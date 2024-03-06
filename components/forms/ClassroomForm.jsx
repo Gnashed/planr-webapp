@@ -21,7 +21,7 @@ const IntitialFormState = {
   subject: '',
   students: '',
   grade_level: '',
-  APorHonors: '',
+  // APorHonors: '',
 };
 
 // Step 2: Classroom Form component.
@@ -52,7 +52,7 @@ export default function ClassroomForm({ obj }) {
       updateSingleClassroom(formInput).then(() => router.push(`/classroom/${obj.id}`));
     } else { // creating a new trip.
       const payload = { ...formInput };
-      // TODO: Add logic to create the classroom, then router user to
+      // Create the classroom, then route user to
       createClassroom(payload).then(() => {
         router.push('/classroom'); // TODO: Might have to come back to this line.
       });
@@ -65,7 +65,7 @@ export default function ClassroomForm({ obj }) {
       <Form onSubmit={handleSubmit}>
         <h2>Classroom Info</h2>
         {/* Subject */}
-        <FloatingLabel controlId="floatingInput1" label="Subject" className="mb-3">
+        <FloatingLabel controlId="floatingInput1" label="What subject are you teaching?" className="mb-3">
           <Form.Control
             type="text"
             placeholder="Enter Subject"
@@ -77,7 +77,7 @@ export default function ClassroomForm({ obj }) {
         </FloatingLabel>
 
         {/* Students */}
-        <FloatingLabel controlId="floatingInput2" label="Students" className="mb-3">
+        <FloatingLabel controlId="floatingInput2" label="How many students are in this class?" className="mb-3">
           <Form.Control
             type="text"
             placeholder="Number of students"
@@ -101,8 +101,8 @@ export default function ClassroomForm({ obj }) {
         </FloatingLabel>
 
         {/* AP or Honors, TODO: Come back to this. */}
-        <p>AP/Honors: </p>
-        {['radio'].map((type) => (
+        <p>AP/Honors? </p>
+        {/* {['radio'].map((type) => (
           <div key={`inline-${type}`} className="mb-3">
             <Form.Check
               inline
@@ -113,20 +113,13 @@ export default function ClassroomForm({ obj }) {
             />
             <Form.Check
               inline
-              label="AP"
+              label="Yes"
               name="group1"
               type={type}
               id={`inline-${type}-2`}
             />
-            <Form.Check
-              inline
-              label="Honors"
-              name="group1"
-              type={type}
-              id={`inline-${type}-3`}
-            />
           </div>
-        ))}
+        ))} */}
 
         {/* SUBMIT BUTTON  */}
         <Button variant="primary" type="submit">{obj.id ? 'Update' : 'Create'} Classroom</Button>
@@ -142,7 +135,7 @@ ClassroomForm.propTypes = {
     subject: PropTypes.string,
     students: PropTypes.string,
     grade_level: PropTypes.string,
-    APorHonors: PropTypes.string,
+    // APorHonors: PropTypes.string,
   }),
 };
 

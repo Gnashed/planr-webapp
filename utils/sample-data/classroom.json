@@ -1,42 +1,8 @@
 {
-  "CR_j5u7v3n0f2p7f4": {
-    "classroom_id":"CR_j5u7v3n0f2p7f4",
-    "teacher_id":"",
-    "subject":"",
-    "grade_level":12,
-    "isHonors":false,
-    "isAdvancePlacement":false
-  },
-  "CR_q7a8j5g7w5x9c9": {
-    "classroom_id":"CR_q7a8j5g7w5x9c9",
-    "teacher_id":"",
-    "subject":"",
-    "grade_level":9,
-    "isHonors":true,
-    "isAdvancePlacement":false
-  },
-  "CR_i5i7j8i1h3m3v6": {
-    "classroom_id":"CR_i5i7j8i1h3m3v6",
-    "teacher_id":"",
-    "subject":"",
-    "grade_level":2,
-    "isHonors":false,
-    "isAdvancePlacement":false
-  },
-  "CR_g6y2n4b7h0o3u1": {
-    "classroom_id":"",
-    "teacher_id":"",
-    "subject":"",
-    "grade_level":7,
-    "isHonors":true,
-    "isAdvancePlacement":false
-  },
-  "CR_w6d0b0q1s6f7w7": {
-    "classroom_id":"CR_w6d0b0q1s6f7w7",
-    "teacher_id":"",
-    "subject":"",
-    "grade_level":10,
-    "isHonors":true,
-    "isAdvancePlacement":false
+  "-QpXtpLHzm-OcFKQJz-Y": {
+    "firebaseKey":"-QpXtpLHzm-OcFKQJz-Y",
+    "subject": "World History & Geography",
+    "grade_level": 8,
+    "honors_or_AP": false
   }
 }
