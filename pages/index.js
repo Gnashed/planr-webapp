@@ -24,7 +24,7 @@ function Home() {
         </Link>
         {/* TODO: This link is temporary. WIP as far as getting it to render dynamically */}
         <Link href="/classroom/ViewClassroom" passHref>
-          <Button variant="primary">Classroom</Button>
+          <Button variant="primary">Classrooms</Button>
         </Link>
       </div>
     </>

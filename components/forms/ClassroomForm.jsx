@@ -19,7 +19,6 @@ Once I get the data:
 // Step 1: Set initial state for the form.
 const IntitialFormState = {
   subject: '',
-  students: '',
   grade_level: '',
   // APorHonors: '',
 };
@@ -32,7 +31,7 @@ export default function ClassroomForm({ obj }) {
 
   // Step 2.2: Add a useEffect. If an 'id' property exist in the obj, update the formInput with the values from the prop.
   useEffect(() => {
-    if (obj.id) setFormInput(obj);
+    if (obj.firebaseKey) setFormInput(obj);
   }, [obj]);
 
   // Step 2.3: Dynamically updates the formInput state based on whatever the user typed in.
@@ -77,7 +76,7 @@ export default function ClassroomForm({ obj }) {
         </FloatingLabel>
 
         {/* Students */}
-        <FloatingLabel controlId="floatingInput2" label="How many students are in this class?" className="mb-3">
+        {/* <FloatingLabel controlId="floatingInput2" label="How many students are in this class?" className="mb-3">
           <Form.Control
             type="text"
             placeholder="Number of students"
@@ -86,7 +85,7 @@ export default function ClassroomForm({ obj }) {
             onChange={handleChange}
             required
           />
-        </FloatingLabel>
+        </FloatingLabel> */}
 
         {/* Grade Level */}
         <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
@@ -131,9 +130,8 @@ export default function ClassroomForm({ obj }) {
 // Step 5: Props
 ClassroomForm.propTypes = {
   obj: PropTypes.shape({
-    id: PropTypes.string,
+    firebaseKey: PropTypes.string,
     subject: PropTypes.string,
-    students: PropTypes.string,
     grade_level: PropTypes.string,
     // APorHonors: PropTypes.string,
   }),
