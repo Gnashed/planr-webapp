@@ -7,24 +7,27 @@ function Home() {
   const { user } = useAuth();
 
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hello {user.displayName}! </h1>
+    <>
+      <div
+        className="text-center d-flex flex-column justify-content-center align-content-center"
+        style={{
+          height: '90vh',
+          padding: '30px',
+          maxWidth: '400px',
+          margin: '0 auto',
+        }}
+      >
+        <h1>Hello {user.displayName}! </h1>
 
-      <Link href="/classroom/new" passHref>
-        <Button variant="success" className="mb-2">Create Classroom</Button>
-      </Link>
-      <Link href="/classroom" passHref>
-        <Button variant="primary">Classroom</Button>
-      </Link>
-    </div>
+        <Link href="/classroom/new" passHref>
+          <Button variant="success" className="mb-2">Create Classroom</Button>
+        </Link>
+        {/* TODO: This link is temporary. WIP as far as getting it to render dynamically */}
+        <Link href="/classroom/ViewClassroom" passHref>
+          <Button variant="primary">Classroom</Button>
+        </Link>
+      </div>
+    </>
   );
 }
 
