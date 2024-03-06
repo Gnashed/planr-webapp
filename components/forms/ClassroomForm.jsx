@@ -46,9 +46,9 @@ export default function ClassroomForm({ obj }) {
   // Step 2.4: Runs when the form submit event is triggered.
   const handleSubmit = (event) => {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
-    if (obj.id) { // updating an existing classroom
+    if (obj.firebaseKey) { // updating an existing classroom
       // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's id.
-      updateClassroom(formInput).then(() => router.push(`/classroom/${obj.id}`));
+      updateClassroom(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
     } else { // creating a new trip.
       const payload = { ...formInput };
       // Create the classroom, then route user to
@@ -121,7 +121,7 @@ export default function ClassroomForm({ obj }) {
         ))} */}
 
         {/* SUBMIT BUTTON  */}
-        <Button variant="primary" type="submit">{obj.id ? 'Update' : 'Create'} Classroom</Button>
+        <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Classroom</Button>
       </Form>
     </>
   );
