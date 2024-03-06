@@ -18,8 +18,11 @@ function Home() {
     >
       <h1>Hello {user.displayName}! </h1>
 
-      <Link href="/newClassroom" passHref>
-        <Button variant="success">Create Classroom</Button>
+      <Link href="/classroom/new" passHref>
+        <Button variant="success" className="mb-2">Create Classroom</Button>
+      </Link>
+      <Link href="/classroom" passHref>
+        <Button variant="primary">Classroom</Button>
       </Link>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
-import { createClassroom, updateSingleClassroom } from '../../api/classroomData';
+import { createClassroom, updateClassroom } from '../../api/classroomData';
 
 /*
 
@@ -49,7 +49,7 @@ export default function ClassroomForm({ obj }) {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
     if (obj.id) { // updating an existing classroom
       // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's id.
-      updateSingleClassroom(formInput).then(() => router.push(`/classroom/${obj.id}`));
+      updateClassroom(formInput).then(() => router.push(`/classroom/${obj.id}`));
     } else { // creating a new trip.
       const payload = { ...formInput };
       // Create the classroom, then route user to
