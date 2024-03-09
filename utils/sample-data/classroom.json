@@ -3,6 +3,7 @@
     "firebaseKey":"-QpXtpLHzm-OcFKQJz-Y",
     "subject": "World History & Geography",
     "grade_level": 8,
-    "honors_or_AP": false
+    "honors_or_AP": false,
+    "number_of_students" : null
   }
 }

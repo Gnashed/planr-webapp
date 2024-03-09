@@ -45,7 +45,7 @@ const getSingleClassroom = (firebaseKey) => new Promise((resolve, reject) => {
 // UPDATE Classroom
 const updateClassroom = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/classroom/${payload.firebaseKey}.json`, {
-    method: 'PUT',
+    method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },

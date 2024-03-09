@@ -47,13 +47,17 @@ export default function ClassroomForm({ obj }) {
   const handleSubmit = (event) => {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
     if (obj.firebaseKey) { // updating an existing classroom
-      // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's id.
+      // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's firebaseKey.
       updateClassroom(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
-    } else { // creating a new trip.
+    } else { // creating a new classroom.
       const payload = { ...formInput };
-      // Create the classroom, then route user to
-      createClassroom(payload).then(() => {
-        router.push('/classroom'); // TODO: Might have to come back to this line.
+      console.warn(payload);
+      // Create the classroom, then route user to classroom page.
+      createClassroom(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateClassroom(patchPayload).then(() => {
+          router.push('/classroom');
+        });
       });
     }
   };
@@ -67,7 +71,6 @@ export default function ClassroomForm({ obj }) {
         <FloatingLabel controlId="floatingInput1" label="What subject are you teaching?" className="mb-3">
           <Form.Control
             type="text"
-            placeholder="Enter Subject"
             name="subject"
             value={formInput.subject}
             onChange={handleChange}
@@ -91,7 +94,6 @@ export default function ClassroomForm({ obj }) {
         <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
           <Form.Control
             type="text"
-            placeholder="Grade Level:"
             name="grade_level"
             value={formInput.grade_level}
             onChange={handleChange}
@@ -130,10 +132,10 @@ export default function ClassroomForm({ obj }) {
 // Step 5: Props
 ClassroomForm.propTypes = {
   obj: PropTypes.shape({
-    firebaseKey: PropTypes.string,
     subject: PropTypes.string,
     grade_level: PropTypes.string,
     // APorHonors: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }),
 };
 
