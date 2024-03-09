@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
-// TODO: import promises from /api.
+import { createClassroom, updateClassroom } from '../../api/classroomData';
 
 /*
 
@@ -19,9 +19,8 @@ Once I get the data:
 // Step 1: Set initial state for the form.
 const IntitialFormState = {
   subject: '',
-  students: '',
   grade_level: '',
-  APorHonors: '', // TODO: Should be radio buttons. WIP
+  // APorHonors: '',
 };
 
 // Step 2: Classroom Form component.
@@ -32,7 +31,7 @@ export default function ClassroomForm({ obj }) {
 
   // Step 2.2: Add a useEffect. If an 'id' property exist in the obj, update the formInput with the values from the prop.
   useEffect(() => {
-    if (obj.id) setFormInput(obj);
+    if (obj.firebaseKey) setFormInput(obj);
   }, [obj]);
 
   // Step 2.3: Dynamically updates the formInput state based on whatever the user typed in.
@@ -47,11 +46,19 @@ export default function ClassroomForm({ obj }) {
   // Step 2.4: Runs when the form submit event is triggered.
   const handleSubmit = (event) => {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
-    if (obj.id) {
-      // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's id.
-    } else {
+    if (obj.firebaseKey) { // updating an existing classroom
+      // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's firebaseKey.
+      updateClassroom(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
+    } else { // creating a new classroom.
       const payload = { ...formInput };
-      // TODO: Add logic to create the classroom using via an object, payload, then routes the user to the classroom.
+      console.warn(payload);
+      // Create the classroom, then route user to classroom page.
+      createClassroom(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateClassroom(patchPayload).then(() => {
+          router.push('/classroom');
+        });
+      });
     }
   };
 
@@ -60,22 +67,63 @@ export default function ClassroomForm({ obj }) {
       {/* Step 4 Add React Bootstrap Form */}
       <Form onSubmit={handleSubmit}>
         <h2>Classroom Info</h2>
-
-        {/* Subject INPUT  */}
-        <FloatingLabel controlId="floatingInput1" label="subject" className="mb-3">
+        {/* Subject */}
+        <FloatingLabel controlId="floatingInput1" label="What subject are you teaching?" className="mb-3">
           <Form.Control
             type="text"
-            placeholder="6th Grade Geometry"
-            name="name"
-            value={formInput.name}
+            name="subject"
+            value={formInput.subject}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
 
+        {/* Students */}
+        {/* <FloatingLabel controlId="floatingInput2" label="How many students are in this class?" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Number of students"
+            name="students"
+            value={formInput.students}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel> */}
+
+        {/* Grade Level */}
+        <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
+          <Form.Control
+            type="text"
+            name="grade_level"
+            value={formInput.grade_level}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* AP or Honors, TODO: Come back to this. */}
+        <p>AP/Honors? </p>
+        {/* {['radio'].map((type) => (
+          <div key={`inline-${type}`} className="mb-3">
+            <Form.Check
+              inline
+              label="No"
+              name="group1"
+              type={type}
+              id={`inline-${type}-1`}
+            />
+            <Form.Check
+              inline
+              label="Yes"
+              name="group1"
+              type={type}
+              id={`inline-${type}-2`}
+            />
+          </div>
+        ))} */}
+
         {/* SUBMIT BUTTON  */}
-        {/* TODO: Fix by adding prop validation */}
-        <Button variant="success" type="submit">{obj.id ? 'Update' : 'Create'} Activity</Button>
+        <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Classroom</Button>
       </Form>
     </>
   );
@@ -84,11 +132,10 @@ export default function ClassroomForm({ obj }) {
 // Step 5: Props
 ClassroomForm.propTypes = {
   obj: PropTypes.shape({
-    classroom_id: PropTypes.string,
     subject: PropTypes.string,
-    students: PropTypes.string,
     grade_level: PropTypes.string,
-    APorHonors: PropTypes.string,
+    // APorHonors: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }),
 };
 
