@@ -59,7 +59,7 @@ export default function Home() {
       <Link href="/classroom/new" passHref>
         <Button variant="success">Create Classroom</Button>
       </Link>
-      <Link href="/classroom" passHref>
+      <Link href="classroom/viewclassrooms" passHref>
         <Button variant="primary" className="mt-1">Classrooms</Button>
       </Link>
     </div>
