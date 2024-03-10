@@ -16,7 +16,7 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
         <Card.Body>
           <Card.Title>{classroomObj.subject}</Card.Title>
           <Card.Text>
-            {classroomObj.grade_level}
+            Grade Level: {classroomObj.grade_level}
           </Card.Text>
           <Card.Text>
             Honors or AP?
