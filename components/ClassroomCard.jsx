@@ -21,9 +21,6 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
           <Card.Text>
             Honors or AP?
           </Card.Text>
-          <Card.Text>
-            Attendance
-          </Card.Text>
 
           <Button variant="primary">Edit</Button>
           <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
