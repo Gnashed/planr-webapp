@@ -17,7 +17,7 @@ const createClassroom = (payload) => new Promise((resolve, reject) => {
 });
 
 // GET Classroom
-const getClassroom = () => new Promise((resolve, reject) => {
+const getClassrooms = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/classroom.json`, {
     method: 'GET',
     headers: {
@@ -57,7 +57,7 @@ const updateClassroom = (payload) => new Promise((resolve, reject) => {
 });
 
 // DELETE Classroom
-const deleteClassroom = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteSingleClassroom = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/classroom/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
@@ -71,8 +71,8 @@ const deleteClassroom = (firebaseKey) => new Promise((resolve, reject) => {
 
 export {
   createClassroom,
-  getClassroom,
+  getClassrooms,
   getSingleClassroom,
   updateClassroom,
-  deleteClassroom,
+  deleteSingleClassroom,
 };
