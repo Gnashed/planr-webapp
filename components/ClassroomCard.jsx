@@ -3,10 +3,10 @@ import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { deleteSingleClassroom } from '../api/classroomData';
 
-export default function ClassroomCard({ obj, onUpdate }) {
+export default function ClassroomCard({ classroomObj, onUpdate }) {
   const deleteClassroom = () => {
-    if (window.confirm(`Would you like to delete ${obj.subject}?`)) {
-      deleteSingleClassroom(obj.firebaseKey).then(() => onUpdate());
+    if (window.confirm(`Would you like to delete ${classroomObj.subject}?`)) {
+      deleteSingleClassroom(classroomObj.firebaseKey).then(() => onUpdate());
     }
   };
 
@@ -14,9 +14,9 @@ export default function ClassroomCard({ obj, onUpdate }) {
     <>
       <Card style={{ width: '18rem' }}>
         <Card.Body>
-          <Card.Title>{obj.subject}</Card.Title>
+          <Card.Title>{classroomObj.subject}</Card.Title>
           <Card.Text>
-            {obj.grade_level}
+            {classroomObj.grade_level}
           </Card.Text>
           <Card.Text>
             Honors or AP?
@@ -34,7 +34,7 @@ export default function ClassroomCard({ obj, onUpdate }) {
 }
 
 ClassroomCard.propTypes = {
-  obj: PropTypes.shape({
+  classroomObj: PropTypes.shape({
     subject: PropTypes.string,
     grade_level: PropTypes.string,
     firebaseKey: PropTypes.string,

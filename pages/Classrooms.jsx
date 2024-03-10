@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import ClassroomCard from '../../components/ClassroomCard';
-import { getClassrooms } from '../../api/classroomData';
+import ClassroomCard from '../components/ClassroomCard';
+import { getClassrooms } from '../api/classroomData';
 
-export default function ViewClassrooms() {
+export default function Classrooms() {
   const [classrooms, setClassrooms] = useState([]);
   const fetchClassrooms = () => {
     getClassrooms().then(setClassrooms);
