@@ -56,7 +56,7 @@ export default function ClassroomForm({ obj }) {
       createClassroom(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateClassroom(patchPayload).then(() => {
-          router.push('/classroom');
+          router.push('/Classrooms');
         });
       });
     }

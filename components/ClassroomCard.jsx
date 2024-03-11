@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { deleteSingleClassroom } from '../api/classroomData';
+import { updateClassroom, deleteSingleClassroom } from '../api/classroomData';
 
 export default function ClassroomCard({ classroomObj, onUpdate }) {
   const deleteClassroom = () => {
@@ -22,7 +22,7 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
             Honors or AP?
           </Card.Text>
 
-          <Button variant="primary">Edit</Button>
+          <Button variant="primary" onClick={updateClassroom}>Edit</Button>
           <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
         </Card.Body>
       </Card>
