@@ -10,6 +10,7 @@ export default function UpdateClassroom() {
 
   useEffect(() => {
     getSingleClassroom(firebaseKey).then(setUpdateClassroomItem);
+    console.warn(firebaseKey);
   }, [firebaseKey]);
 
   return <ClassroomForm obj={updateClassroomItem} />;

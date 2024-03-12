@@ -51,7 +51,7 @@ export default function ClassroomForm({ obj }) {
   const handleSubmit = (event) => {
     event.preventDefault(); // Keeps the page from reloading since that's the default behavior of submitting a form.
     if (obj.firebaseKey) { // updating an existing classroom
-      // TODO: Add logic that updates the Classroom (if one exists), then routes the user to the classroom object's firebaseKey.
+      // Updates the Classroom (if one exists), then routes the user to the classroom object's firebaseKey.
       updateClassroom(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
     } else { // creating a new classroom.
       const payload = { ...formInput };
