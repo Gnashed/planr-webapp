@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { updateClassroom, deleteSingleClassroom } from '../api/classroomData';
+import { deleteSingleClassroom } from '../api/classroomData';
 
 export default function ClassroomCard({ classroomObj, onUpdate }) {
   const deleteClassroom = () => {
@@ -19,10 +19,10 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
             Grade Level: {classroomObj.grade_level}
           </Card.Text>
           <Card.Text>
-            Honors or AP?
+            Honors or AP? {classroomObj.honors_or_AP}
           </Card.Text>
 
-          <Button variant="primary" onClick={updateClassroom}>Edit</Button>
+          <Button variant="primary">Edit</Button>
           <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
         </Card.Body>
       </Card>
@@ -34,6 +34,7 @@ ClassroomCard.propTypes = {
   classroomObj: PropTypes.shape({
     subject: PropTypes.string,
     grade_level: PropTypes.string,
+    honors_or_AP: PropTypes.bool, // TODO: Might need to update this.
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,

@@ -20,7 +20,7 @@ Once I get the data:
 const IntitialFormState = {
   subject: '',
   grade_level: '',
-  // APorHonors: '',
+  honors_or_AP: '',
 };
 
 // Step 2: Classroom Form component.
@@ -37,6 +37,10 @@ export default function ClassroomForm({ obj }) {
   // Step 2.3: Dynamically updates the formInput state based on whatever the user typed in.
   const handleChange = (event) => {
     const { name, value } = event.target; // The input field. This is the element that triggered the event that's being listened out for.
+    // TODO: WIP validating the value for each checkbox.
+    // if(value === true) {
+
+    // }
     setFormInput((prevState) => ({ // prevState = taco. We're taking the previous state of the form...
       ...prevState, // ... to create a copy of the prev. state.
       [name]: value, // Updates the name property with the new value that the user entered.
@@ -67,6 +71,7 @@ export default function ClassroomForm({ obj }) {
       {/* Step 4 Add React Bootstrap Form */}
       <Form onSubmit={handleSubmit}>
         <h2>Classroom Info</h2>
+
         {/* Subject */}
         <FloatingLabel controlId="floatingInput1" label="What subject are you teaching?" className="mb-3">
           <Form.Control
@@ -77,18 +82,6 @@ export default function ClassroomForm({ obj }) {
             required
           />
         </FloatingLabel>
-
-        {/* Students */}
-        {/* <FloatingLabel controlId="floatingInput2" label="How many students are in this class?" className="mb-3">
-          <Form.Control
-            type="text"
-            placeholder="Number of students"
-            name="students"
-            value={formInput.students}
-            onChange={handleChange}
-            required
-          />
-        </FloatingLabel> */}
 
         {/* Grade Level */}
         <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
@@ -103,24 +96,27 @@ export default function ClassroomForm({ obj }) {
 
         {/* AP or Honors, TODO: Come back to this. */}
         <p>AP/Honors? </p>
-        {/* {['radio'].map((type) => (
+        {['radio'].map((type) => (
           <div key={`inline-${type}`} className="mb-3">
             <Form.Check
               inline
-              label="No"
-              name="group1"
+              label="Yes"
+              name="honors_or_AP"
               type={type}
               id={`inline-${type}-1`}
+              value={formInput.honors_or_AP}
             />
             <Form.Check
               inline
-              label="Yes"
-              name="group1"
+              label="No"
+              name="honors_or_AP"
               type={type}
               id={`inline-${type}-2`}
+              value={formInput.honors_or_AP}
+              defaultChecked
             />
           </div>
-        ))} */}
+        ))}
 
         {/* SUBMIT BUTTON  */}
         <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Classroom</Button>
@@ -134,7 +130,7 @@ ClassroomForm.propTypes = {
   obj: PropTypes.shape({
     subject: PropTypes.string,
     grade_level: PropTypes.string,
-    // APorHonors: PropTypes.string,
+    honors_or_AP: PropTypes.bool,
     firebaseKey: PropTypes.string,
   }),
 };
