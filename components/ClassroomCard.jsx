@@ -19,7 +19,7 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
             Grade Level: {classroomObj.grade_level}
           </Card.Text>
           <Card.Text>
-            Honors or AP?
+            Honors or AP? {classroomObj.honors_or_AP}
           </Card.Text>
 
           <Button variant="primary">Edit</Button>
@@ -34,6 +34,7 @@ ClassroomCard.propTypes = {
   classroomObj: PropTypes.shape({
     subject: PropTypes.string,
     grade_level: PropTypes.string,
+    honors_or_AP: PropTypes.bool, // TODO: Might need to update this.
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
