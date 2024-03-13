@@ -20,7 +20,7 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
             Grade Level: {classroomObj.grade_level}
           </Card.Text>
           <Card.Text>
-            Honors or AP? {classroomObj.honors_or_AP}
+            Honors or AP: {classroomObj.honors_or_AP}
           </Card.Text>
 
           <Link href={`/classroom/edit/${classroomObj.firebaseKey}`} passHref>
