@@ -26,7 +26,7 @@ export default function StudentCard({ studentObj, onUpdate }) {
             Attendance
           </Card.Text>
 
-          <Link href={`/classroom/edit/${studentObj.firebaseKey}`} passHref>
+          <Link href={`/student/edit/${studentObj.firebaseKey}`} passHref>
             <Button variant="primary">Edit</Button>
           </Link>
           <Button variant="danger" onClick={deleteStudent}>Remove</Button>

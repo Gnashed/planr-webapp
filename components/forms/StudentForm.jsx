@@ -34,7 +34,7 @@ export default function StudentForm({ obj }) {
     event.preventDefault();
     if (obj.firebaseKey) {
       // TODO: Come back to this
-      updateStudent(formInput).then(() => router.push(`/Student/${obj.firebaseKey}`));
+      updateStudent(formInput).then(() => router.push(`/student/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput };
       console.warn(payload);
