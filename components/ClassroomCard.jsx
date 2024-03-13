@@ -14,20 +14,22 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
   return (
     <>
       <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>{classroomObj.subject}</Card.Title>
-          <Card.Text>
-            Grade Level: {classroomObj.grade_level}
-          </Card.Text>
-          <Card.Text>
-            Honors or AP: {classroomObj.honors_or_AP}
-          </Card.Text>
+        <Link href={`/classroom/${classroomObj.firebaseKey}`} passHref>
+          <Card.Body>
+            <Card.Title>{classroomObj.subject}</Card.Title>
+            <Card.Text>
+              Grade Level: {classroomObj.grade_level}
+            </Card.Text>
+            <Card.Text>
+              Honors or AP: {classroomObj.honors_or_AP}
+            </Card.Text>
 
-          <Link href={`/classroom/edit/${classroomObj.firebaseKey}`} passHref>
-            <Button variant="primary">Edit</Button>
-          </Link>
-          <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
-        </Card.Body>
+            <Link href={`/classroom/edit/${classroomObj.firebaseKey}`} passHref>
+              <Button variant="primary">Edit</Button>
+            </Link>
+            <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
+          </Card.Body>
+        </Link>
       </Card>
     </>
   );
