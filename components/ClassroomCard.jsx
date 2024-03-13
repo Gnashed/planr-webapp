@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { deleteSingleClassroom } from '../api/classroomData';
 
 export default function ClassroomCard({ classroomObj, onUpdate }) {
@@ -22,7 +23,9 @@ export default function ClassroomCard({ classroomObj, onUpdate }) {
             Honors or AP? {classroomObj.honors_or_AP}
           </Card.Text>
 
-          <Button variant="primary">Edit</Button>
+          <Link href={`/classroom/edit/${classroomObj.firebaseKey}`} passHref>
+            <Button variant="primary">Edit</Button>
+          </Link>
           <Button variant="danger" onClick={deleteClassroom}>Remove</Button>
         </Card.Body>
       </Card>
