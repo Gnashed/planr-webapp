@@ -23,6 +23,12 @@ export default function Home() {
       <Link href="/Classrooms" passHref>
         <Button variant="primary" className="mt-1">Classrooms</Button>
       </Link>
+      <Link href="/LessonPlan" passHref>
+        <Button variant="primary" className="mt-1">Lesson Plans</Button>
+      </Link>
+      <Link href="/Grades" passHref>
+        <Button variant="primary" className="mt-1">Grades</Button>
+      </Link>
     </div>
   );
 }
