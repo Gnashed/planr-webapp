@@ -42,7 +42,7 @@ export default function StudentForm({ obj }) {
         const patchPayload = { firebaseKey: name };
         updateStudent(patchPayload).then(() => {
           // TODO: WIP, will need to come back to this.
-          router.push('/classroom/new');
+          router.push(`/classroom/${obj.firebaseKey}`);
         });
       });
     }
