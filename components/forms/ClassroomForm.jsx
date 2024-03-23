@@ -55,7 +55,6 @@ export default function ClassroomForm({ obj }) {
       updateClassroom(formInput).then(() => router.push('/Classrooms'));
     } else { // creating a new classroom.
       const payload = { ...formInput };
-      console.warn(payload);
       // Create the classroom, then route user to classroom page.
       createClassroom(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
