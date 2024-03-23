@@ -1,7 +1,7 @@
 {
-  "GR_v9z6s5z5k6h3c6": {
-    "id":"GR_v9z6s5z5k6h3c6",
-    "student_d": "",
+  "-JWeo0s3h9c7q3v3fb-J": {
+    "firebaseKey":"-JWeo0s3h9c7q3v3fb-J",
+    "student_id": "-ZwDujOVia-HaPGPHb-N",
     "quizzes":99.5,
     "homework":85.0,
     "classwork":62.2,
@@ -9,9 +9,9 @@
     "exams":81.1,
     "isPassing":true
   },
-  "GR_p0z6e9w0z4n1r9": {
-    "id":"GR_p0z6e9w0z4n1r9",
-    "student_id": "",
+  "-FZia0m5q4l2c0r7oq-N": {
+    "firebaseKey":"-FZia0m5q4l2c0r7oq-N",
+    "student_id": "-XaDfpPXya-CtMENVj-Q",
     "quizzes":80.3,
     "homework":68.2,
     "classwork":65.1,
@@ -19,84 +19,14 @@
     "exams":83.1,
     "isPassing":true
   },
-  "GR_j7q7x8o0w4z8w7": {
-    "id":"GR_j7q7x8o0w4z8w7",
-    "student_id": "",
+  "-GWkj6f9v5s0p0j3ty-D": {
+    "firebaseKey":"-GWkj6f9v5s0p0j3ty-D",
+    "student_id": "-WkSwxVQwl-LlHSIEl-K",
     "quizzes":88.3,
     "homework":61.5,
     "classwork":93.0,
     "projects":60.3,
     "exams":77.5,
     "isPassing":true
-  },
-  "GR_s7s1z4l7l1i0d6": {
-    "id":"GR_s7s1z4l7l1i0d6",
-    "student_id": "",
-    "quizzes":98.7,
-    "homework":83.6,
-    "classwork":73.0,
-    "projects":92.5,
-    "exams":77.9,
-    "isPassing":true
-  },
-  "GR_m9s3w2y1p7s0t2": {
-    "id":"GR_m9s3w2y1p7s0t2",
-    "student_id": "",
-    "quizzes":65.1,
-    "homework":61.7,
-    "classwork":68.4,
-    "projects":86.2,
-    "exams":64.5,
-    "isPassing":true
-  },
-  "GR_f5w8k1v6t2a1v0": {
-    "id":"GR_f5w8k1v6t2a1v0",
-    "student_id": "",
-    "quizzes":76.2,
-    "homework":91.1,
-    "classwork":79.0,
-    "projects":95.7,
-    "exams":88.1,
-    "isPassing":true
-  },
-  "GR_u5a2p2h4j3i5a9": {
-    "id":"GR_u5a2p2h4j3i5a9",
-    "student_id": "",
-    "quizzes":73.6,
-    "homework":88.3,
-    "classwork":94.3,
-    "projects":74.0,
-    "exams":80.5,
-    "isPassing":true
-  },
-  "GR_l5v0g6w5o7y5h4": {
-    "id":"GR_l5v0g6w5o7y5h4",
-    "student_id": "",
-    "quizzes":99.0,
-    "homework":91.2,
-    "classwork":83.6,
-    "projects":63.3,
-    "exams":99.8,
-    "isPassing":true
-  },
-  "GR_s3f6t7i7w7e1s2": {
-    "id":"GR_s3f6t7i7w7e1s2",
-    "student_id": "",
-    "quizzes":74.8,
-    "homework":74.4,
-    "classwork":87.4,
-    "projects":63.0,
-    "exams":65.6,
-    "isPassing":true
-  },
-  "GR_g6m9s6q5s2f3z2": {
-    "id":"GR_g6m9s6q5s2f3z2",
-    "student_id": "",
-    "quizzes":60.0,
-    "homework":59.0,
-    "classwork":73.1,
-    "projects":40.6,
-    "exams":59.8,
-    "isPassing":false
-    }
+  }
 }

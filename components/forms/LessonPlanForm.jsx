@@ -36,7 +36,7 @@ export default function LessonPlanForm({ obj }) {
       createLessonPlan(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateLessonPlan(patchPayload).then(() => {
-          // TODO: WIP, getting a url /lessonplan/undefined.
+          // TODO: updates the lesson plan, but doesn't route correctly
           router.push('/LessonPlan');
         });
       });

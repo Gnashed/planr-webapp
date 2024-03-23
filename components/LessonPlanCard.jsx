@@ -21,7 +21,7 @@ export default function LessonPlanCard({ lessonPlanObj, onUpdate }) {
               {lessonPlanObj.lesson}
             </Card.Text>
             <Card.Text>
-              Duration: {lessonPlanObj.duration}
+              Duration: {lessonPlanObj.duration} Minutes
             </Card.Text>
 
             <Link href={`/lessonplan/edit/${lessonPlanObj.firebaseKey}`} passHref>

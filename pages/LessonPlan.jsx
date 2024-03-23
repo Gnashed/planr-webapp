@@ -4,7 +4,7 @@ import Link from 'next/link';
 import LessonPlanCard from '../components/LessonPlanCard';
 import { getLessonPlan } from '../api/lessonPlanData';
 
-export default function Classrooms() {
+export default function LessonPlans() {
   const [lessons, setLessons] = useState([]);
   const fetchLessons = () => {
     getLessonPlan().then(setLessons);
