@@ -15,13 +15,24 @@ export default function GradesCard({ gradeObj, onUpdate }) {
     <>
       <Card style={{ width: '18rem' }}>
         <Card.Body>
+          {/* TODO: */}
           <Card.Title>Student Name</Card.Title>
 
-          <Card.Text>{gradeObj.classwork}</Card.Text>
-          <Card.Text>{gradeObj.homework}</Card.Text>
-          <Card.Text>{gradeObj.quizzes}</Card.Text>
-          <Card.Text>{gradeObj.projects}</Card.Text>
-          <Card.Text>{gradeObj.exams}</Card.Text>
+          <Card.Text>
+            Classwork: {gradeObj.classwork}
+          </Card.Text>
+          <Card.Text>
+            Homework: {gradeObj.homework}
+          </Card.Text>
+          <Card.Text>
+            Quizzes: {gradeObj.quizzes}
+          </Card.Text>
+          <Card.Text>
+            Projects: {gradeObj.projects}
+          </Card.Text>
+          <Card.Text>
+            Exams: {gradeObj.exams}
+          </Card.Text>
 
           <Link href={`/grades/edit/${gradeObj.firebaseKey}`} passHref>
             <Button variant="primary">Edit</Button>
