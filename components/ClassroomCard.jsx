@@ -39,7 +39,7 @@ ClassroomCard.propTypes = {
   classroomObj: PropTypes.shape({
     subject: PropTypes.string,
     grade_level: PropTypes.string,
-    honors_or_AP: PropTypes.bool, // TODO: Might need to update this.
+    honors_or_AP: PropTypes.string, // TODO: WIP validating
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
