@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ClassroomGradesCard from '../components/ClassroomGradesCard';
+// import Link from 'next/link';
+// import { Button } from 'react-bootstrap';
+import GradesCard from '../components/GradesCard';
 import { getGrades } from '../api/gradesData';
 
-export default function Classrooms() {
+export default function Grades() {
   const [grades, setGrades] = useState([]);
   const fetchGrades = () => {
     getGrades().then(setGrades);
@@ -24,7 +26,7 @@ export default function Classrooms() {
     >
       <h2>Grades</h2>
       {grades.map((grade) => (
-        <ClassroomGradesCard key={grade.firebaseKey} gradesObj={grade} onUpdate={fetchGrades} />
+        <GradesCard key={grade.firebaseKey} gradesObj={grade} onUpdate={fetchGrades} />
       ))}
     </div>
   );
