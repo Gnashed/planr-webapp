@@ -20,8 +20,6 @@ export default function StudentForm({ obj }) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    // TODO: WIP validating the value for each checkbox.
-    // if(value === true) {
 
     // }
     setFormInput((prevState) => ({
@@ -33,15 +31,15 @@ export default function StudentForm({ obj }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (obj.firebaseKey) {
-      // TODO: Come back to this. Need to route user back to "/classroom/{firebaseKey}"
-      updateStudent(formInput).then(() => router.push(`/student/${obj.firebaseKey}`));
+      // TODO: Come back to this. Need to route user back to the classroom
+      updateStudent(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput };
       console.warn(payload);
       createStudent(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateStudent(patchPayload).then(() => {
-          // TODO: WIP, will need to come back to this.
+          // TODO: WIP, getting a url /classroom/undefined.
           router.push(`/classroom/${obj.firebaseKey}`);
         });
       });
