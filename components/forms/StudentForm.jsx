@@ -20,8 +20,6 @@ export default function StudentForm({ obj }) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    // }
     setFormInput((prevState) => ({
       ...prevState, // ... to create a copy of the prev. state.
       [name]: value, // Updates the name property with the new value that the user entered.

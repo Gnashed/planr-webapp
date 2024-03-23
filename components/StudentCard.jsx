@@ -17,11 +17,11 @@ export default function StudentCard({ studentObj, onUpdate }) {
         <Card.Body>
           <Card.Title>{studentObj.first_name} {studentObj.last_name}</Card.Title>
           <Card.Text>
-            {studentObj.grade_level}
+            Grade Level: {studentObj.grade_level}
           </Card.Text>
-          <Card.Text>
-            {studentObj.average_grade}
-          </Card.Text>
+          {/* <Card.Text>
+            Average Grade: {studentObj.average_grade} TODO:
+          </Card.Text> */}
           <Card.Text>
             Attendance
           </Card.Text>
@@ -41,7 +41,7 @@ StudentCard.propTypes = {
     first_name: PropTypes.string,
     last_name: PropTypes.string,
     grade_level: PropTypes.string,
-    average_grade: PropTypes.string,
+    // average_grade: PropTypes.string, TODO:
     firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
