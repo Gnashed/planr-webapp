@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Form, FloatingLabel, Button } from 'react-bootstrap';
-import { createStudent, updateStudent } from '../../api/studentData';
+import { createLessonPlan, updateLessonPlan } from '../../api/lessonPlanData';
 
 const IntitialFormState = {
-  first_name: '',
-  last_name: '',
-  grade_level: '',
+  lesson: '',
+  day: '',
+  duration: '',
 };
 
-export default function StudentForm({ obj }) {
+export default function LessonPlanForm({ obj }) {
   const [formInput, setFormInput] = useState(IntitialFormState);
   const router = useRouter();
 
@@ -29,16 +29,15 @@ export default function StudentForm({ obj }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (obj.firebaseKey) {
-      // TODO: Come back to this. Need to route user back to the classroom
-      updateStudent(formInput).then(() => router.push(`/classroom/${obj.firebaseKey}`));
+      // TODO: Come back to this. Need to route user back to the lesson plan
+      updateLessonPlan(formInput).then(() => router.push(`/lessonplan/${obj.firebaseKey}`));
     } else {
       const payload = { ...formInput };
-      console.warn(payload);
-      createStudent(payload).then(({ name }) => {
+      createLessonPlan(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-        updateStudent(patchPayload).then(() => {
-          // TODO: WIP, getting a url /classroom/undefined.
-          router.push(`/classroom/${obj.firebaseKey}`);
+        updateLessonPlan(patchPayload).then(() => {
+          // TODO: WIP, getting a url /lessonplan/undefined.
+          router.push('/LessonPlan');
         });
       });
     }
@@ -48,56 +47,57 @@ export default function StudentForm({ obj }) {
     <>
       {/* Step 4 Add React Bootstrap Form */}
       <Form onSubmit={handleSubmit}>
-        <h2>Student Info</h2>
+        <h2>Lesson Plan Form</h2>
 
-        {/* Name */}
-        <FloatingLabel controlId="floatingInput1" label="First name" className="mb-3">
+        {/* Lesson Name */}
+        <FloatingLabel controlId="floatingInput1" label="Lesson" className="mb-3">
           <Form.Control
             type="text"
-            name="first_name"
-            value={formInput.first_name}
+            name="lesson"
+            value={formInput.lesson}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
-        <FloatingLabel controlId="floatingInput2" label="Last name" className="mb-3">
+        {/* Day of Lesson */}
+        <FloatingLabel controlId="floatingInput2" label="Day" className="mb-3">
           <Form.Control
             type="text"
-            name="last_name"
-            value={formInput.last_name}
+            name="day"
+            value={formInput.day}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
-        {/* Grade Level: */}
-        <FloatingLabel controlId="floatingInput3" label="Grade level" className="mb-3">
+        {/* Duration */}
+        <FloatingLabel controlId="floatingInput3" label="Duration (minutes)" className="mb-3">
           <Form.Control
             type="text"
-            name="grade_level"
-            value={formInput.grade_level}
+            name="duration"
+            value={formInput.duration}
             onChange={handleChange}
             required
           />
         </FloatingLabel>
 
         {/* SUBMIT BUTTON  */}
-        <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Student</Button>
+        <Button variant="primary" type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Lesson</Button>
       </Form>
     </>
   );
 }
 
 // Step 5: Props
-StudentForm.propTypes = {
+LessonPlanForm.propTypes = {
   obj: PropTypes.shape({
-    first_name: PropTypes.string,
-    last_name: PropTypes.string,
-    grade_level: PropTypes.string,
+    lesson: PropTypes.string,
+    day: PropTypes.string,
+    duration: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
 };
 
 // Step 5.1: Set default props
-StudentForm.defaultProps = {
+LessonPlanForm.defaultProps = {
   obj: IntitialFormState,
 };

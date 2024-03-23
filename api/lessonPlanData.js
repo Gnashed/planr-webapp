@@ -2,9 +2,9 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-// CREATE Student
-const createStudent = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/student.json`, {
+// CREATE Lesson Plan
+const createLessonPlan = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/lesson_plan.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -16,9 +16,9 @@ const createStudent = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// GET Student
-const getStudents = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/student.json`, {
+// GET Lesson Plan
+const getLessonPlan = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/lesson_plan.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -29,9 +29,9 @@ const getStudents = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// GET Single Student
-const getSingleStudent = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/student/${firebaseKey}.json`, {
+// GET Single Lesson Plan
+const getSingleLessonPlan = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/lesson_plan/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -42,9 +42,9 @@ const getSingleStudent = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// UPDATE Student
-const updateStudent = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/student/${payload.firebaseKey}.json`, {
+// UPDATE Lesson Plan
+const updateLessonPlan = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/lesson_plan/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -56,9 +56,9 @@ const updateStudent = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// DELETE Student
-const deleteSingleStudent = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/student/${firebaseKey}.json`, {
+// DELETE Lesson Plan
+const deleteSingleLessonPlan = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/lesson_plan/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application.json',
@@ -70,9 +70,9 @@ const deleteSingleStudent = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 export {
-  createStudent,
-  getStudents,
-  getSingleStudent,
-  updateStudent,
-  deleteSingleStudent,
+  createLessonPlan,
+  getLessonPlan,
+  getSingleLessonPlan,
+  updateLessonPlan,
+  deleteSingleLessonPlan,
 };
