@@ -13,7 +13,7 @@ export default function GradesCard({ gradeObj, onUpdate }) {
 
   return (
     <>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '30rem' }}>
         <Card.Body>
           {/* TODO: */}
           <Card.Title>Student Name</Card.Title>
