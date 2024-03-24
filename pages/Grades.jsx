@@ -26,7 +26,7 @@ export default function Grades() {
     >
       <h2>Grades</h2>
       {grades.map((grade) => (
-        <GradesCard key={grade.firebaseKey} gradesObj={grade} onUpdate={fetchGrades} />
+        <GradesCard key={grade.firebaseKey} gradeObj={grade} onUpdate={fetchGrades} />
       ))}
     </div>
   );
